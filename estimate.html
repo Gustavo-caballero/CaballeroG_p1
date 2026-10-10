@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Estimate | Industrial Painter</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@400&family=Inter:wght@400;700&family=Instrument+Sans:wght@700&family=Oregano+One&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- -------- HEADER / NAVEGACION -------- -->
+  <header class="site-header">
+    <div class="container header-inner">
+
+      <a class="logo" href="index.html">
+        <img src="images/imagen_logo.png" alt="Industrial Painter logo">
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="services.html">Services</a>
+        <a class="nav-link" href="projects.html">Projects</a>
+        <a class="nav-link" href="about.html">About Us</a>
+        <a class="nav-link active" href="estimate.html">Estimate</a>
+        <a class="nav-link" href="#">Contact</a>
+      </nav>
+
+      <a class="button button-small" href="estimate.html">Get a Quote</a>
+
+    </div>
+  </header>
+
+
+  <main>
+
+    <!-- -------- CONTENEDOR ESTIMATE 01 / TITULO -------- -->
+    <section class="estimate-hero container">
+      <h1>Online Estimate</h1>
+
+      <img
+        src="images/imagen_051.jpg"
+        alt="Desk with calculator, notebook and coffee">
+    </section>
+
+
+    <!-- -------- CONTENEDOR ESTIMATE 02 / INTRO -------- -->
+    <section class="estimate-intro container">
+      <h2>Painting Online Estimate</h2>
+
+      <h3>
+        To help us estimate your project costs, please provide details of what you need,
+        and our advisory team will contact you.
+      </h3>
+    </section>
+
+
+    <!-- -------- CONTENEDOR ESTIMATE 03 / FORMULARIO -------- -->
+    <section class="estimate-form-section container">
+
+      <form id="estimate-form" class="estimate-form" action="#" method="post">
+
+        <!-- -------- CAMPO 01 -------- -->
+        <div class="form-row">
+          <label for="company">Company:</label>
+          <input id="company" name="company" type="text" placeholder="Fill this section with your information">
+        </div>
+
+        <!-- -------- CAMPO 02 -------- -->
+        <div class="form-row">
+          <label for="services">Type of Services:</label>
+          <input id="services" name="services" type="text" placeholder="Fill this section with your information">
+        </div>
+
+        <!-- -------- CAMPO 03 -------- -->
+        <div class="form-row">
+          <label for="name">Name:</label>
+          <input id="name" name="name" type="text" placeholder="Fill this section with your information">
+        </div>
+
+        <!-- -------- CAMPO 04 -------- -->
+        <div class="form-row">
+          <label for="email">Email Address:</label>
+          <input id="email" name="email" type="email" placeholder="Fill this section with your information">
+        </div>
+
+        <!-- -------- CAMPO 05 -------- -->
+        <div class="form-row">
+          <label for="phone">Phone Number:</label>
+          <input id="phone" name="phone" type="tel" placeholder="Fill this section with your information">
+        </div>
+
+        <!-- -------- CAMPO 06 -------- -->
+        <div class="form-row">
+          <label for="address">Address:</label>
+          <input id="address" name="address" type="text" placeholder="Fill this section with your information">
+        </div>
+
+        <!-- -------- CAMPO 07 -------- -->
+        <div class="form-row">
+          <label for="city">City:</label>
+          <input id="city" name="city" type="text" placeholder="Fill this section with your information">
+        </div>
+
+        <!-- -------- CAMPO 08 -------- -->
+        <div class="form-row">
+          <label for="state">State:</label>
+          <input id="state" name="state" type="text" placeholder="Fill this section with your information">
+        </div>
+
+        <!-- -------- CAMPO 09 -------- -->
+        <div class="form-row">
+          <label for="zip">Zip Code:</label>
+          <input id="zip" name="zip" type="text" placeholder="Fill this section with your information">
+        </div>
+
+        <!-- -------- CAMPO 10 / COMMENTS -------- -->
+        <div class="form-large-field">
+          <label for="comments">Comments or Questions</label>
+          <textarea id="comments" name="comments" placeholder="Fill this section with your information"></textarea>
+        </div>
+
+        <!-- -------- CAMPO 11 / DIMENSIONS -------- -->
+        <div class="form-large-field estimate-dimensions">
+          <label for="dimensions">Estimate Dimensions:</label>
+          <textarea id="dimensions" name="dimensions" placeholder="Fill this section with your information"></textarea>
+        </div>
+
+      </form>
+    </section>
+
+
+    <!-- -------- CONTENEDOR ESTIMATE 04 / SUBMIT -------- -->
+    <section class="estimate-submit container">
+      <button class="submit-button" type="submit" form="estimate-form">Submit</button>
+
+      <h3>
+        Please verify that all information is correct. Once you submit,
+        our team will reach out via phone or email within 24 to 48 hours.
+      </h3>
+    </section>
+
+  </main>
+
+</body>
+</html>

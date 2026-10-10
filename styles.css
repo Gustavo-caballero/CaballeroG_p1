@@ -1,0 +1,1525 @@
+/* =========================================================
+   INDUSTRIAL PAINTER — SHARED STYLES
+   HOME + SERVICES + PROJECTS
+========================================================= */
+
+/* -------- VARIABLES GENERALES -------- */
+
+:root {
+  --text: #272727;
+  --green: #508814;
+  --white: #ffffff;
+  --container: 1198px;
+
+  --font-h1: "Oregano One", serif;
+  --font-h2: "Instrument Sans", sans-serif;
+  --font-h3: "Inter", sans-serif;
+  --font-body: "Funnel Display", sans-serif;
+  --font-button: "Inter", sans-serif;
+}
+
+/* -------- RESET / GENERAL -------- */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--text);
+  background: var(--white);
+  font-family: var(--font-body);
+  font-size: 20px;
+  line-height: 1.35;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: min(calc(100% - 40px), var(--container));
+  margin-inline: auto;
+}
+
+/* -------- TIPOGRAFIAS -------- */
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  font-family: var(--font-h1);
+  font-size: clamp(3.2rem, 10vw, 6rem);
+  font-weight: 400;
+  line-height: 0.95;
+}
+
+h2 {
+  font-family: var(--font-h2);
+  font-size: clamp(1.8rem, 5vw, 2.625rem);
+  font-weight: 700;
+  line-height: 1.05;
+}
+
+h3 {
+  font-family: var(--font-h3);
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+p {
+  margin-bottom: 1.5rem;
+}
+
+/* -------- BOTONES -------- */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0.75rem 1.4rem;
+  background: var(--green);
+  color: var(--white);
+  font-family: var(--font-button);
+  font-size: 1rem;
+  border: 2px solid var(--green);
+  transition: 0.2s ease;
+}
+
+/* -- este codigo hace que el boton se mueva ligeramente hacia arriba
+   cuando paso el cursor, no olvidar -- */
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button-outline {
+  background: transparent;
+  color: var(--text);
+}
+
+.button-outline:hover {
+  background: var(--green);
+  color: var(--white);
+}
+
+.button-small {
+  min-height: 38px;
+  padding-inline: 1rem;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+/* -------- HEADER / NAVEGACION -------- */
+
+.site-header {
+  background: var(--white);
+}
+
+.header-inner {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1rem;
+  align-items: center;
+  padding-block: 0.75rem;
+}
+
+.logo img {
+  width: 170px;
+  height: auto;
+}
+
+.main-nav {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  order: 3;
+}
+
+.nav-link {
+  padding: 0.65rem 0.85rem;
+  font-family: var(--font-button);
+  font-size: 0.85rem;
+  transition: 0.2s ease;
+}
+
+/* -- este codigo crea el efecto hover del menu:
+   al pasar el cursor cambia a fondo verde y letras blancas, no olvidar -- */
+
+.nav-link:hover {
+  background: var(--green);
+  color: var(--white);
+}
+
+/* -- este codigo mantiene marcada la pagina donde estoy actualmente,
+   aunque no tenga el cursor encima, no olvidar -- */
+
+.nav-link.active {
+  background: var(--green);
+  color: var(--white);
+}
+
+/* =========================================================
+   HOME PAGE
+========================================================= */
+
+/* -------- CONTENEDOR HOME 01 / HERO -------- */
+
+.hero-content {
+  padding-block: 3rem 2rem;
+  text-align: center;
+}
+
+.hero h1 {
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+.hero-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  align-items: stretch;
+}
+
+.hero-image {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+/* -------- CONTENEDOR HOME 02 / FREE ESTIMATE -------- */
+
+.estimate-strip {
+  margin-top: 1rem;
+}
+
+.estimate-strip-link {
+  display: block;
+  width: 100%;
+  padding: 0.9rem 1rem;
+  background: var(--green);
+  color: var(--white);
+  text-align: center;
+  text-transform: uppercase;
+  font-family: var(--font-button);
+  line-height: 1.05;
+}
+
+/* -------- CONTENEDOR HOME 03 / INTRO -------- */
+
+.intro-section {
+  display: grid;
+  gap: 2rem;
+  padding-block: 1.5rem 3rem;
+}
+
+.intro-image img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.intro-copy {
+  align-self: center;
+}
+
+.intro-copy h3 {
+  margin-bottom: 2rem;
+}
+
+/* -------- CONTENEDOR HOME 04 / BENEFICIOS -------- */
+
+.perfection-section {
+  padding-bottom: 3rem;
+}
+
+.perfection-section h2 {
+  margin-bottom: 2rem;
+}
+
+.section-intro {
+  max-width: 760px;
+  margin-inline: auto;
+  margin-bottom: 2.5rem;
+}
+
+.benefits-list {
+  display: grid;
+  gap: 1.2rem;
+  max-width: 720px;
+  margin-inline: auto;
+}
+
+.benefit-item {
+  display: grid;
+  grid-template-columns: 54px 1fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+.benefit-item img {
+  width: 54px;
+  height: 54px;
+  padding: 0.55rem;
+  object-fit: contain;
+  background: var(--green);
+}
+
+.benefit-item h3 {
+  margin-bottom: 0.2rem;
+  font-size: 1.05rem;
+}
+
+.benefit-item p {
+  margin: 0;
+}
+
+/* -------- CONTENEDOR HOME 05 / IMAGEN GRANDE -------- */
+
+.wide-image-section img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+/* -------- CONTENEDOR HOME 06 / SINGLE SOURCE -------- */
+
+.single-source {
+  padding-block: 3rem;
+}
+
+.single-source h2 {
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.single-source-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.package-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 145px;
+  padding: 1.5rem;
+  background: var(--green);
+  color: var(--white);
+  border-radius: 18px;
+  text-align: center;
+  font-family: var(--font-button);
+}
+
+.package-card small {
+  display: block;
+  margin-top: 0.8rem;
+}
+
+/* -------- CONTENEDOR HOME 07 / CORE OFFERINGS -------- */
+
+.core-section {
+  padding-block: 2rem 4rem;
+}
+
+.core-title {
+  margin-bottom: 3rem;
+  text-transform: none;
+}
+
+.core-list {
+  display: grid;
+  gap: 2.8rem;
+}
+
+.core-item {
+  display: grid;
+  grid-template-columns: 78px 1fr;
+  gap: 0.8rem 1.2rem;
+  align-items: start;
+}
+
+.core-number {
+  font-family: var(--font-h1);
+  font-size: 4rem;
+  line-height: 0.9;
+}
+
+.core-item h2 {
+  margin-bottom: 0;
+  font-size: 1.8rem;
+}
+
+.core-item p {
+  grid-column: 1 / -1;
+  margin: 0;
+}
+
+/* -------- CONTENEDOR HOME 08 / BARRA DE IMAGENES -------- */
+
+.image-bar img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+/* =========================================================
+   SERVICES PAGE
+========================================================= */
+
+/* -------- CONTENEDOR SERVICES 01 / INTRO -------- */
+
+.services-hero {
+  padding-block: 3rem 5rem;
+  text-align: center;
+}
+
+.services-hero h1 {
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.services-eyebrow {
+  margin-bottom: 2.5rem;
+  font-family: var(--font-h3);
+  font-size: 1.25rem;
+  text-transform: uppercase;
+}
+
+.services-hero-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.8rem;
+}
+
+/* -------- CONTENEDOR SERVICES 02 / LISTA -------- */
+
+.services-list {
+  padding-bottom: 5rem;
+}
+
+.service-row {
+  display: grid;
+  gap: 1.5rem;
+  padding-block: 2.5rem;
+}
+
+.service-copy {
+  display: grid;
+  grid-template-columns: 74px 1fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+.service-number {
+  font-family: var(--font-h1);
+  font-size: 4rem;
+  line-height: 0.9;
+}
+
+.service-text h2 {
+  margin-bottom: 1.4rem;
+}
+
+.service-text p {
+  margin-bottom: 1.5rem;
+}
+
+.service-text ul {
+  margin: 0 0 1.8rem;
+  padding-left: 1.4rem;
+}
+
+.service-text li {
+  margin-bottom: 0.7rem;
+}
+
+.learn-more {
+  display: inline-block;
+  color: var(--green);
+  font-family: var(--font-h2);
+  font-size: 1.65rem;
+  font-weight: 700;
+  transition: transform 0.2s ease;
+}
+
+/* -- este codigo desplaza Learn More ligeramente hacia la derecha
+   cuando paso el cursor, no olvidar -- */
+
+.learn-more:hover {
+  transform: translateX(5px);
+}
+
+.service-image img {
+  width: 100%;
+  aspect-ratio: 586 / 391;
+  object-fit: cover;
+}
+
+/* =========================================================
+   PROJECTS PAGE
+========================================================= */
+
+/* -------- CONTENEDOR 01 / TITULO -------- */
+
+.projects-hero {
+  padding-block: 3rem 2rem;
+  text-align: center;
+}
+
+.projects-hero h1 {
+  margin-bottom: 0;
+}
+
+/* -------- CONTENEDOR 02 / MAPA -------- */
+
+.projects-map {
+  padding-block: 1rem 4rem;
+}
+
+.projects-map img {
+  width: 100%;
+  height: auto;
+}
+
+/* -------- CONTENEDOR 03 / ESTADOS -------- */
+
+.projects-states {
+  padding-bottom: 5rem;
+}
+
+.projects-states h2 {
+  margin-bottom: 3rem;
+}
+
+.states-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px 10px;
+}
+
+.state-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 77px;
+  padding: 10px;
+
+  background: var(--white);
+  color: var(--text);
+
+  border: 2px solid var(--green);
+  border-radius: 16px;
+
+  font-family: var(--font-h2);
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-align: center;
+
+  transition: 0.2s ease;
+}
+
+/* Hover: fondo verde y letras blancas */
+/* -- este codigo cambia los botones de estados a verde con texto blanco
+   y los levanta ligeramente cuando paso el cursor, no olvidar -- */
+
+.state-button:hover {
+  background: var(--green);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+/* -------- CONTENEDOR 04 / FREE ESTIMATE -------- */
+
+.projects-estimate {
+  display: grid;
+  gap: 2rem;
+  align-items: center;
+  padding-block: 3rem 5rem;
+}
+
+.projects-estimate-copy h1 {
+  margin-bottom: 0;
+  line-height: 1;
+}
+
+.projects-estimate-copy span {
+  color: var(--green);
+}
+
+.online-estimate-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 180px;
+  min-height: 110px;
+  padding: 1rem;
+
+  background: var(--green);
+  color: var(--text);
+
+  border-radius: 16px;
+
+  font-family: var(--font-h2);
+  font-size: 1.55rem;
+  font-weight: 700;
+  line-height: 1.05;
+  text-align: center;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+/* Hover: letras blancas y el boton crece un poco */
+/* -- este codigo cambia el texto a blanco y agranda ligeramente
+   el boton Online Estimate cuando paso el cursor, no olvidar -- */
+
+.online-estimate-button:hover {
+  color: var(--white);
+  transform: scale(1.06);
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (min-width: 768px) {
+
+  .container {
+    width: min(calc(100% - 64px), var(--container));
+  }
+
+  /* -------- HEADER -------- */
+
+  .header-inner {
+    grid-template-columns: auto 1fr auto;
+  }
+
+  .main-nav {
+    grid-column: auto;
+    order: initial;
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
+
+  /* -------- HOME -------- */
+
+  .hero-actions {
+    flex-direction: row;
+    justify-content: center;
+    gap: 5rem;
+  }
+
+  .hero-actions .button {
+    min-width: 230px;
+  }
+
+  .hero-image {
+    height: 420px;
+  }
+
+  .intro-section {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+
+  .perfection-section h2 {
+    text-align: center;
+  }
+
+  .wide-image-section img {
+    height: 500px;
+  }
+
+  .single-source-grid {
+    grid-template-columns: 1fr 320px;
+    align-items: center;
+  }
+
+  .core-item {
+    grid-template-columns: 110px 280px 1fr;
+    align-items: center;
+  }
+
+  .core-item p {
+    grid-column: auto;
+  }
+
+  .image-bar img {
+    height: 300px;
+  }
+
+  /* -------- SERVICES -------- */
+
+  .services-hero-actions {
+    flex-direction: row;
+    justify-content: center;
+    gap: 4rem;
+  }
+
+  .services-hero-actions .button {
+    min-width: 210px;
+  }
+
+  .service-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    padding-block: 3.5rem;
+  }
+
+  .service-copy {
+    grid-template-columns: 92px 1fr;
+  }
+
+  /* -------- PROJECTS -------- */
+
+  .states-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .projects-estimate {
+    grid-template-columns: 1fr auto;
+  }
+}
+
+/* =========================================================
+   DESKTOP
+========================================================= */
+
+@media (min-width: 1200px) {
+
+  /* -------- HEADER -------- */
+
+  .header-inner {
+    min-height: 88px;
+  }
+
+  .logo img {
+    width: 205px;
+  }
+
+  .nav-link {
+    padding-inline: 1rem;
+  }
+
+  /* -------- HOME -------- */
+
+  .hero-content {
+    padding-block: 2rem 1.5rem;
+  }
+
+  .hero h1 {
+    font-size: 6rem;
+  }
+
+  .hero-image {
+    height: 460px;
+  }
+
+  .intro-section {
+    gap: 4.5rem;
+  }
+
+  .wide-image-section img {
+    height: 560px;
+  }
+
+  .core-number {
+    font-size: 6rem;
+  }
+
+  .core-item h2 {
+    font-size: 2.625rem;
+  }
+
+  /* -------- SERVICES -------- */
+
+  .services-hero {
+    padding-top: 2.5rem;
+    padding-bottom: 6rem;
+  }
+
+  .services-hero h1 {
+    font-size: 6rem;
+  }
+
+  .service-row {
+    grid-template-columns: 1fr 586px;
+    gap: 5rem;
+    min-height: 500px;
+  }
+
+  .service-number {
+    font-size: 6rem;
+  }
+
+  .service-text h2 {
+    font-size: 2.625rem;
+  }
+
+  .service-image img {
+    width: 586px;
+    height: 391px;
+  }
+
+  /* -------- PROJECTS -------- */
+
+  .projects-hero {
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+  }
+
+  .projects-hero h1 {
+    font-size: 6rem;
+  }
+
+  .projects-map {
+    padding-bottom: 5rem;
+  }
+
+  .projects-states h2 {
+    margin-bottom: 4rem;
+  }
+
+  .states-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px 10px;
+  }
+
+  .state-button {
+    min-height: 77px;
+    padding: 10px;
+    font-size: 1.55rem;
+  }
+
+  .projects-estimate {
+    grid-template-columns: 1fr 220px;
+    gap: 5rem;
+    padding-top: 5rem;
+    padding-bottom: 7rem;
+  }
+
+  .projects-estimate-copy h1 {
+    font-size: 5.5rem;
+  }
+
+  .online-estimate-button {
+    width: 220px;
+    min-height: 130px;
+    font-size: 1.8rem;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE / MOBILE
+========================================================= */
+
+/* ----- usando este comando hago que se haga mas pequeno
+   al tamano de un celular... ancho 390 no olvidar ----- */
+
+@media (max-width: 480px) {
+
+  body {
+    font-size: 18px;
+  }
+
+  .container {
+    width: min(calc(100% - 28px), var(--container));
+  }
+
+  /* -------- HEADER MOBILE -------- */
+
+  .header-inner {
+    grid-template-columns: 1fr auto;
+  }
+
+  .logo img {
+    width: 145px;
+  }
+
+  .main-nav {
+    gap: 0.15rem;
+  }
+
+  .nav-link {
+    padding: 0.5rem 0.55rem;
+    font-size: 0.72rem;
+  }
+
+  .button-small {
+    padding-inline: 0.7rem;
+    font-size: 0.72rem;
+  }
+
+  /* -------- HOME MOBILE -------- */
+
+  .hero h1 {
+    font-size: 3.25rem;
+  }
+
+  .hero-image {
+    height: 220px;
+  }
+
+  .perfection-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .wide-image-section img {
+    height: 260px;
+  }
+
+  .single-source h2 {
+    text-align: left;
+  }
+
+  .core-title {
+    font-size: 3.4rem;
+  }
+
+  .core-item {
+    grid-template-columns: 64px 1fr;
+  }
+
+  .core-number {
+    font-size: 3.2rem;
+  }
+
+  .core-item h2 {
+    font-size: 1.55rem;
+  }
+
+  .image-bar img {
+    height: 170px;
+  }
+
+  /* -------- SERVICES MOBILE -------- */
+
+  .services-hero {
+    padding-block: 2.5rem 3.5rem;
+  }
+
+  .services-hero h1 {
+    font-size: 3.6rem;
+  }
+
+  .services-eyebrow {
+    font-size: 0.95rem;
+  }
+
+  .service-row {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding-block: 2.3rem;
+  }
+
+  .service-copy {
+    grid-template-columns: 64px 1fr;
+  }
+
+  .service-number {
+    font-size: 3.4rem;
+  }
+
+  .service-text h2 {
+    font-size: 1.8rem;
+  }
+
+  .service-text ul {
+    padding-left: 1.2rem;
+  }
+
+  .learn-more {
+    font-size: 1.4rem;
+  }
+
+  .service-image img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 586 / 391;
+  }
+
+  /* -------- PROJECTS MOBILE -------- */
+
+  .projects-hero {
+    padding-block: 2.5rem 1.5rem;
+  }
+
+  .projects-hero h1 {
+    font-size: 3.8rem;
+  }
+
+  .projects-map {
+    padding-bottom: 2.5rem;
+  }
+
+  .projects-states {
+    padding-bottom: 3rem;
+  }
+
+  .projects-states h2 {
+    margin-bottom: 2rem;
+  }
+
+  .states-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .state-button {
+    min-height: 58px;
+    font-size: 1.15rem;
+  }
+
+  .projects-estimate {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding-block: 2.5rem 4rem;
+  }
+
+  .projects-estimate-copy h1 {
+    font-size: 3.5rem;
+  }
+
+  .online-estimate-button {
+    width: 100%;
+    min-height: 78px;
+    font-size: 1.4rem;
+  }
+}
+
+/* =========================================================
+   ABOUT PAGE
+========================================================= */
+
+/* -------- CONTENEDOR ABOUT 01 / TITULO -------- */
+
+.about-hero {
+  padding-block: 3rem 2rem;
+  text-align: center;
+}
+
+.about-hero h1 {
+  margin-bottom: 1.5rem;
+}
+
+.about-hero h3 {
+  margin-bottom: 0;
+}
+
+/* -------- CONTENEDOR ABOUT 02 / INTRO -------- */
+
+.about-intro {
+  display: grid;
+  gap: 2rem;
+  align-items: center;
+  padding-block: 2rem 6rem;
+}
+
+.about-intro-copy h2 {
+  margin-bottom: 2rem;
+}
+
+.about-intro-copy h3 {
+  margin-bottom: 3rem;
+}
+
+.email-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 100px;
+  background: var(--green);
+  color: var(--text);
+  font-family: var(--font-button);
+  font-size: 1rem;
+  transition: 0.2s ease;
+}
+
+.email-button:hover {
+  color: var(--white);
+  transform: scale(1.03);
+}
+
+.about-intro-image img {
+  width: 100%;
+  aspect-ratio: 586 / 446;
+  object-fit: cover;
+  border-radius: 24px;
+}
+
+/* -------- CONTENEDOR ABOUT 03 / CORPORATE OFFICE -------- */
+
+.corporate-office {
+  padding-bottom: 8rem;
+}
+
+.corporate-office > h1 {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.office-row {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 2rem;
+  align-items: center;
+  max-width: 760px;
+  margin: 0 auto 3rem;
+}
+
+.office-icon {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+}
+
+.office-copy p {
+  margin: 0;
+  font-size: 1.35rem;
+}
+
+.call-now-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+}
+
+.call-now-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 100px;
+  background: var(--green);
+  color: var(--text);
+  border-radius: 18px;
+  font-family: var(--font-h2);
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  transition: 0.2s ease;
+}
+
+.call-now-button:hover {
+  color: var(--white);
+  transform: scale(1.03);
+}
+
+/* -------- ABOUT TABLET -------- */
+
+@media (min-width: 768px) {
+  .about-intro {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+}
+
+/* -------- ABOUT DESKTOP -------- */
+
+@media (min-width: 1200px) {
+  .about-hero {
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+  }
+
+  .about-hero h1 {
+    font-size: 6rem;
+  }
+
+  .about-intro {
+    grid-template-columns: 1fr 586px;
+    gap: 6rem;
+    padding-top: 2rem;
+    padding-bottom: 8rem;
+  }
+
+  .about-intro-copy h2 {
+    font-size: 2.625rem;
+  }
+
+  .about-intro-image img {
+    width: 586px;
+    height: 446px;
+  }
+
+  .corporate-office > h1 {
+    font-size: 6rem;
+  }
+
+  .office-row {
+    margin-bottom: 4rem;
+  }
+
+  .call-now-button {
+    font-size: 2.625rem;
+  }
+}
+
+/* ----- usando este comando hago que se haga mas pequeno
+   al tamano de un celular... ancho 390 no olvidar ----- */
+
+@media (max-width: 480px) {
+  .about-hero {
+    padding-block: 2.5rem 1.5rem;
+  }
+
+  .about-hero h1 {
+    font-size: 3.8rem;
+  }
+
+  .about-hero h3 {
+    font-size: 1rem;
+  }
+
+  .about-intro {
+    grid-template-columns: 1fr;
+    padding-block: 1.5rem 4rem;
+  }
+
+  .about-intro-copy h2 {
+    font-size: 1.9rem;
+  }
+
+  .email-button {
+    width: 100%;
+    padding: 12px 20px;
+  }
+
+  .corporate-office {
+    padding-bottom: 5rem;
+  }
+
+  .corporate-office > h1 {
+    font-size: 3.6rem;
+    margin-bottom: 3rem;
+  }
+
+  .office-row {
+    grid-template-columns: 72px 1fr;
+    gap: 1.2rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .office-icon {
+    width: 72px;
+    height: 72px;
+  }
+
+  .office-copy p {
+    font-size: 1rem;
+  }
+
+  .call-now-wrapper {
+    margin-top: 3rem;
+  }
+
+  .call-now-button {
+    width: 100%;
+    padding: 22px 18px;
+    font-size: 1.4rem;
+  }
+}
+
+/* =========================================================
+   ESTIMATE PAGE
+========================================================= */
+
+/* -------- CONTENEDOR ESTIMATE 01 / HERO -------- */
+
+.estimate-hero {
+  padding-top: 3rem;
+  text-align: center;
+}
+
+.estimate-hero h1 {
+  margin-bottom: 1.5rem;
+}
+
+.estimate-hero img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* -------- CONTENEDOR ESTIMATE 02 / INTRO -------- */
+
+.estimate-intro {
+  padding-block: 4rem 2.5rem;
+}
+
+.estimate-intro h2 {
+  margin-bottom: 2rem;
+}
+
+.estimate-intro h3 {
+  max-width: 620px;
+  margin-left: 80px;
+}
+
+/* -------- CONTENEDOR ESTIMATE 03 / FORMULARIO -------- */
+
+.estimate-form-section {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 3rem;
+}
+
+.estimate-form {
+  width: min(100%, 900px);
+  padding: 42px 48px;
+
+  /* Verde #508814 con 50% de opacidad */
+  background: rgba(80, 136, 20, 0.50);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 210px 1fr;
+  gap: 18px;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.form-row label,
+.form-large-field label {
+  font-family: var(--font-h3);
+  font-size: 1.5rem;
+}
+
+/* -- estos son los campos pequenos donde el usuario puede escribir
+   su informacion dentro del formulario, no olvidar -- */
+
+.form-row input {
+  width: 100%;
+  height: 30px;
+  padding: 5px 10px;
+
+  color: var(--text);
+  background: #eceaea;
+
+  border: 0;
+  border-radius: 5px;
+  outline: none;
+}
+
+/* -- focus significa que el usuario hizo click dentro del campo;
+   este codigo coloca un borde verde para mostrar que esta activo, no olvidar -- */
+
+.form-row input:focus,
+.form-large-field textarea:focus {
+  outline: 2px solid var(--green);
+  outline-offset: 2px;
+}
+
+/* -- placeholder es el texto de ayuda que aparece dentro del campo
+   y desaparece cuando el usuario comienza a escribir, no olvidar -- */
+
+.form-row input::placeholder,
+.form-large-field textarea::placeholder {
+  color: #777777;
+}
+
+.form-large-field {
+  display: grid;
+  gap: 27px;
+}
+
+/* -- textarea permite escribir textos mas largos como comentarios
+   y dimensiones del proyecto, no olvidar -- */
+
+.form-large-field textarea {
+  width: 100%;
+  height: 146px;
+  resize: vertical;
+
+  padding: 12px;
+
+  color: var(--text);
+  background: #eceaea;
+
+  border: 0;
+  border-radius: 5px;
+  outline: none;
+}
+
+/* Separacion especial de Figma entre Comments y Estimate Dimensions */
+.estimate-dimensions {
+  margin-top: 200px;
+}
+
+/* -------- CONTENEDOR ESTIMATE 04 / SUBMIT -------- */
+
+.estimate-submit {
+  display: grid;
+  gap: 2rem;
+  align-items: start;
+  padding-bottom: 6rem;
+}
+
+.submit-button {
+  justify-self: start;
+  padding: 0.65rem 1rem;
+
+  background: var(--green);
+  color: var(--white);
+
+  border: 0;
+  border-radius: 12px;
+
+  font-family: var(--font-h2);
+  font-size: 2rem;
+  font-weight: 700;
+
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+/* -- este codigo agranda ligeramente el boton Submit
+   cuando paso el cursor, no olvidar -- */
+
+.submit-button:hover {
+  transform: scale(1.06);
+}
+
+.estimate-submit h3 {
+  margin: 0;
+  max-width: 430px;
+}
+
+/* -------- ESTIMATE TABLET -------- */
+
+@media (min-width: 768px) {
+  .estimate-submit {
+    grid-template-columns: auto 1fr;
+    justify-content: center;
+    gap: 7rem;
+  }
+}
+
+/* -------- ESTIMATE DESKTOP -------- */
+
+@media (min-width: 1200px) {
+  .estimate-hero h1 {
+    font-size: 6rem;
+  }
+
+  .estimate-intro {
+    padding-top: 5rem;
+  }
+
+  .estimate-form {
+    width: 900px;
+  }
+
+  /* Input regular aproximado a 560 x 30 */
+  .form-row {
+    grid-template-columns: 210px 560px;
+  }
+
+  /* Areas grandes aproximadas a 787 x 146 */
+  .form-large-field textarea {
+    width: 787px;
+  }
+
+  .estimate-submit {
+    padding-top: 1rem;
+    padding-bottom: 7rem;
+  }
+}
+
+/* ----- usando este comando hago que se haga mas pequeno
+   al tamano de un celular... ancho 390 no olvidar ----- */
+
+@media (max-width: 480px) {
+  .estimate-hero {
+    padding-top: 2.5rem;
+  }
+
+  .estimate-hero h1 {
+    font-size: 3.6rem;
+  }
+
+  .estimate-intro {
+    padding-block: 3rem 2rem;
+  }
+
+  .estimate-intro h2 {
+    font-size: 1.8rem;
+  }
+
+  .estimate-intro h3 {
+    margin-left: 0;
+    font-size: 1rem;
+  }
+
+  .estimate-form {
+    width: 100%;
+    padding: 24px 18px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-bottom: 24px;
+  }
+
+  .form-row label,
+  .form-large-field label {
+    font-size: 1rem;
+  }
+
+  .form-row input {
+    height: 42px;
+  }
+
+  .form-large-field {
+    gap: 14px;
+  }
+
+  .form-large-field textarea {
+    width: 100%;
+    height: 130px;
+  }
+
+  /* En mobile reducimos los 200px para evitar demasiado espacio */
+  .estimate-dimensions {
+    margin-top: 70px;
+  }
+
+  .estimate-submit {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding-bottom: 4rem;
+  }
+
+  .submit-button {
+    width: 100%;
+    font-size: 1.6rem;
+  }
+
+  .estimate-submit h3 {
+    font-size: 1rem;
+  }
+}
